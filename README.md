@@ -1,69 +1,104 @@
-# Welcome to your Lovable project
+# 🚆 Railway Reservation System (MERN Stack)
 
-## Project info
+A full-stack web application that allows users to search, book, and manage train tickets online. It includes a user-friendly frontend, a secure backend, booking system, and an admin portal for managing trains and schedules.
 
-**URL**: https://lovable.dev/projects/37f09e59-b117-4b64-ac78-0bcfa9b3f92b
+---
 
-## How can I edit this code?
+## 🧰 Tech Stack
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/37f09e59-b117-4b64-ac78-0bcfa9b3f92b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
+### 🔹 Frontend (React + TypeScript + Vite)
+- ReactJS
 - Vite
 - TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Axios
+- React Router
 
-## How can I deploy this project?
+### 🔹 Backend (Express.js + MongoDB)
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- Bcrypt for password hashing
+- dotenv, cors, morgan
 
-Simply open [Lovable](https://lovable.dev/projects/37f09e59-b117-4b64-ac78-0bcfa9b3f92b) and click on Share -> Publish.
+---
 
-## I want to use a custom domain - is that possible?
+## ✨ Features
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+### 👥 User Module
+- Register & Login with JWT Auth
+- Search Trains by source/destination/date
+- Book tickets in real-time
+- View booking history
+- PNR status check
+
+### 🛠 Admin Module
+- Add/Edit/Delete Trains
+- Set train schedules and availability
+- Manage all bookings
+
+### 📱 Other
+- Fully responsive UI
+- Secure API routes
+- Future-ready payment system
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sruthisoppa/Railway-Reservation-System.git
+cd Railway-Reservation-System
+2. Backend Setup
+bash
+Copy
+Edit
+cd backend
+npm install
+npm run dev
+Create a .env file inside backend/ with the following:
+
+env
+Copy
+Edit
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+3. Frontend Setup
+bash
+Copy
+Edit
+cd ../frontend
+npm install
+npm run dev
+Make sure the frontend uses correct API URLs (proxy or env settings).
+
+🧪 Folder Structure (Simplified)
+bash
+Copy
+Edit
+backend/
+├── config/
+├── controllers/
+├── models/
+├── routes/
+└── server.js
+
+frontend/
+└── src/
+    ├── components/
+    ├── pages/
+    ├── hooks/
+    ├── utils/
+    ├── App.tsx
+    └── main.tsx
+💡 Future Enhancements
+Payment gateway integration (e.g., Razorpay/Stripe)
+
+SMS/email ticket confirmations
+
+Admin analytics dashboard
+
+PNR sharing via WhatsApp/email
